@@ -1,10 +1,6 @@
 # Emotion to Music Matching & Generation
 # Please note that you need to remove line 15 (os.enviorn[...]) if running locally, rather than on Google Colab
 
-!pip install pygame
-!apt install libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg -y
-!pip install PyAudio
-
 from IPython.display import Audio
 import time
 import pandas as pd
@@ -12,7 +8,13 @@ import os
 import pygame
 import matplotlib.pyplot as plt
 import seaborn as sns
-# os.environ['SDL_AUDIODRIVER'] = 'dsp' # ONLY FOR COLAB - REMOVE FOR LOCAL RUN
+
+# Please install the required packages
+# !pip install pygame
+# !apt install libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg -y
+# !pip install PyAudio
+
+# os.environ['SDL_AUDIODRIVER'] = 'dsp' # ONLY FOR COLAB - COMMENT OUT FOR LOCAL RUN
 
 emotion_valence_arousal = {
     "neutral": {"valence": (4.5, 6.2), "arousal": (4.8, 5.8)},
