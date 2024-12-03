@@ -36,9 +36,9 @@ emotion_va_df = pd.DataFrame([
 ])
 
 # Loading the Music Database
-deam_va_values_csv = "/datasets/DEAM/annotations/static_annotations.csv"
+deam_va_values_csv = "datasets/DEAM/static_annotations.csv"
 deam_va_values = pd.read_csv(deam_va_values_csv)
-audio_path = "/datasets/DEAM/MEMD_audio"
+audio_path = "datasets/DEAM/MEMD_audio"
 valid_song_ids = set(deam_va_values['song_id'])
 
 audio_files = []
@@ -54,7 +54,7 @@ audio_with_va_df = audio_with_va_df.sort_values('song_id')
 print(audio_with_va_df.head())
 
 # Save the mapping
-audio_with_va_df.to_csv("/datasets/DEAM/outputs/deam_audio_mapping.csv", index=False)
+audio_with_va_df.to_csv("datasets/DEAM/outputs/deam_audio_mapping.csv", index=False)
 audio_with_emotions_df = audio_with_va_df.copy()
 
 # Map the Emotion to the Valence/Arousal Space
@@ -99,8 +99,8 @@ plt.legend(title="Emotion", bbox_to_anchor=(1.05, 1), loc="upper left")
 plt.tight_layout()
 plt.savefig("plots/valence_arousal_emotion.png")
 
-audio_with_emotions_df.to_csv("/datasets/DEAM/outputs/deam_mapping_with_emotions.csv", index=False)
-pred_df = pd.read_csv("/content/drive/MyDrive/Project/predicted_emotions.csv")
+audio_with_emotions_df.to_csv("datasets/DEAM/outputs/deam_mapping_with_emotions.csv", index=False)
+pred_df = pd.read_csv("predicted_emotions.csv")
 
 # Obtains a music file for the emotion given
 def music_to_emotions (df, pred_df, emotion_list=None):
