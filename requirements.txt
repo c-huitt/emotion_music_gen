@@ -1,0 +1,36 @@
+# Deep Learning & ML Libraries
+tensorflow>=2.13.0
+torch>=2.0.1
+torchaudio>=2.0.1
+keras>=2.13.1
+transformers>=4.30.0
+scikit-learn>=1.2.2
+
+# Audio Processing
+librosa>=0.10.1
+pyaudio>=0.2.13
+ffmpeg-python>=0.2.0
+soundfile>=0.12.1
+
+# Data Processing & Analysis
+numpy>=1.24.1
+pandas>=2.0.3
+scipy>=1.10.1
+
+# Text Processing
+nltk>=3.8.1
+gensim>=4.3.1
+whisper>=1.1.10
+
+# Visualization
+matplotlib>=3.7.1
+seaborn>=0.12.2
+
+# Additional Utilities
+tqdm>=4.65.0
+pygame>=2.5.0
+entropy>=0.1.1
+imbalanced-learn>=0.10.1
+
+# Optional Dependencies
+wandb>=0.15.0  # For experiment tracking

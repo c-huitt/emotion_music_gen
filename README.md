@@ -1,4 +1,4 @@
-# AUDIO-TEXT EMOTION CLASSIFICATION IN SPEECH FOR ADAPTIVE MUSIC SYNTHESIS
+# Audio-Text Emotion Classification in Speech for Adaptive Music Synthesis
 
 ## Overview
 This study focuses on developing a multimodal emotion classification system that detects emotions from audio and generates personalized music based on the identified emotional context. The system processes and augments audio data from standardized datasets (RAVDESS, CREMA, SAVEE, and TESS) to ensure robustness. Audio features such as Mel-Frequency Cepstral Coefficients (MFCCs) and spectral characteristics are extracted, while text transcriptions, generated using OpenAI’s Whisper model, are encoded with Word2Vec embeddings. Emotion classification is performed using a 7-layer Convolutional Neural Network (CNN) and a hybrid CNN-LSTM model. The integration of audio and text features improves the accuracy of emotion detection, which is then linked to dynamic music generation. This project offers a new framework for creating emotionally resonant content, with potential applications in media production, storytelling, and creative industries.
@@ -31,3 +31,65 @@ This study focuses on developing a multimodal emotion classification system that
 - **svm.py**: Experimented SVM for emotion classification.
 - **svm_savee.py**: SVM using Savee(smallest dataset) to check for accuracy.
 - **wav2vec.py**: feature extractions using Wav2Vec model.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed to run the front end application:
+1. Python 3.8+
+2. CUDA-enabled GPU (recommended for transformer models)
+3. System Dependencies: \
+   **macOS:**
+    ```bash
+   brew install portaudio ffmpeg
+    ```
+   **Windows:**
+   1. Install FFmpeg: \
+      Download FFmpeg from FFmpeg Official Website \
+      Add FFmpeg to your system PATH 
+   2. Install Microsoft Visual C++ Build Tools: \
+      Download from Microsoft Visual Studio \
+      During installation, select "Desktop development with C++"
+
+### Installation
+#### Only follow these steps if you wish to run the application locally. 
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/c-huitt/emotion_music_gen.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd emotion_music_gen
+   ```
+
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Unzip the large .csv files in the datasets folder:
+   ```bash
+   gunzip *.gz
+   ```
+
+5. Run the music_gen.py file:
+   ```bash
+   python music_gen.py
+   ```
+
+## Contributing
+
+Feel free to contribute. Please fork the repository and submit a pull request if you choose to do so.
+
+## Acknowledgments
+
+This project uses the following datasets:
+- [DEAM](https://cvml.unige.ch/databases/DEAM/s) 
+- [SAVEE](http://kahlan.eps.surrey.ac.uk/savee/)
+- [RAVDESS](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio)
+- [TESS](https://utoronto.scholaris.ca/collections/036db644-9790-4ed0-90cc-be1dfb8a4b66)
+- [CREMA-D](https://www.kaggle.com/datasets/ejlok1/cremad)
+
