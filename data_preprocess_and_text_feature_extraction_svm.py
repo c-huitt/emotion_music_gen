@@ -1,19 +1,12 @@
 import os
 import re
-import shutil
 import glob
-from collections import defaultdict
-import itertools
-import pickle
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from IPython.display import Audio
 import librosa
 import librosa.display
-import entropy
-from keras import utils, layers, models
 from tensorflow.python.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -28,12 +21,8 @@ from sklearn.ensemble import RandomForestClassifier, VotingClassifier
 from sklearn.feature_selection import RFE
 from imblearn.over_sampling import SMOTE
 
-# Install Whisper and its dependencies
-# !pip install git+https://github.com/openai/whisper.git
-# !pip install ffmpeg
-# !pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# Load the Whisper model
 import whisper
-import re
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer

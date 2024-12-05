@@ -1,5 +1,5 @@
 # Emotion to Music Matching & Generation
-# Please note that you need to remove line 15 (os.enviorn[...]) if running locally, rather than on Google Colab
+# Please note that you need to comment in line 12 (os.enviorn[...]) if running on Google Colab
 
 from IPython.display import Audio
 import time
@@ -8,11 +8,6 @@ import os
 import pygame
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-# Please install the required packages
-# !pip install pygame
-# !apt install libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg -y
-# !pip install PyAudio
 
 # os.environ['SDL_AUDIODRIVER'] = 'dsp' # ONLY FOR COLAB - COMMENT OUT FOR LOCAL RUN
 
@@ -185,14 +180,10 @@ def music_to_emotions (df, pred_df, emotion_list=None):
 # Please run the sections below to generate music
 music_to_emotions(audio_with_emotions_df, pred_df)
 
-# OR run the sections below to generate music for specific emotions
-music_to_emotions(audio_with_emotions_df, pred_df, ['happy'])
-
-music_to_emotions(audio_with_emotions_df, pred_df, ['sad'])
-
-music_to_emotions(audio_with_emotions_df, pred_df, ['neutral'])
-
-music_to_emotions(audio_with_emotions_df, pred_df, ['angry'])
-
-music_to_emotions(audio_with_emotions_df, pred_df, ['fear'])
+# # OR run the sections below to generate music for specific emotions
+# music_to_emotions(audio_with_emotions_df, pred_df, ['happy'])
+# music_to_emotions(audio_with_emotions_df, pred_df, ['sad'])
+# music_to_emotions(audio_with_emotions_df, pred_df, ['neutral'])
+# music_to_emotions(audio_with_emotions_df, pred_df, ['angry'])
+# music_to_emotions(audio_with_emotions_df, pred_df, ['fear'])
 

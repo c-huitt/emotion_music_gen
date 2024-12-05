@@ -1,8 +1,6 @@
 import os
 import re
-from glob import glob
 import itertools
-import pickle
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -111,8 +109,6 @@ Crema_df.head()
 """**TESS DATASET**"""
 
 Tess = "datasets/Tess"
-
-
 emotion_df = []
 
 for wav in os.listdir(Tess):
@@ -129,12 +125,8 @@ Tess_df.rename(columns={0: "Emotion", 1: "Path"}, inplace=True)
 
 Tess_df.head()
 
-#df = pd.concat([Savee_df], axis=0)
 df = pd.concat([ Savee_df, Ravdess_df,  Crema_df, Tess_df], axis=0)
-df.shape
-
 df.head(10)
-
 df.drop(df.index[df['Emotion'] == 'surprise'], inplace=True)
 
 """**DATA AUGMENTATION**"""
@@ -523,7 +515,6 @@ cm = np.array([
     [ 2,  23,  31,  18,  27, 1283],
 ])
 
-
 cm_plot_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad']
 
 individual_accuracies = cm.diagonal() / cm.sum(axis=1)
@@ -536,7 +527,6 @@ plt.title('Individual Accuracies for Each Emotion', fontsize=15)
 plt.ylim(0, 1)
 for i, acc in enumerate(individual_accuracies):
     plt.text(i, acc + 0.02, f"{acc:.2f}", ha='center', fontsize=10)
-
 plt.tight_layout()
 plt.savefig('plots/individual_accuracies_cnn7layer.png')
 plt.show()
