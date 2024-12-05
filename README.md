@@ -1,7 +1,7 @@
 # Audio-Text Emotion Classification in Speech for Adaptive Music Synthesis
 
 ## Overview
-This study focuses on developing a multimodal emotion classification system that detects emotions from audio and generates personalized music based on the identified emotional context. The system processes and augments audio data from standardized datasets (RAVDESS, CREMA, SAVEE, and TESS) to ensure robustness. Audio features such as Mel-Frequency Cepstral Coefficients (MFCCs) and spectral characteristics are extracted, while text transcriptions, generated using OpenAI’s Whisper model, are encoded with Word2Vec embeddings. Emotion classification is performed using a 7-layer Convolutional Neural Network (CNN) and a hybrid CNN-LSTM model. The integration of audio and text features improves the accuracy of emotion detection, which is then linked to dynamic music generation. This project offers a new framework for creating emotionally resonant content, with potential applications in media production, storytelling, and creative industries.
+This study focuses on developing a multimodal emotion classification system that detects emotions from audio and provides personalized music based on the identified emotional context. The system processes and augments audio data from standardized datasets (RAVDESS, CREMA, SAVEE, and TESS) to ensure robustness. Audio features such as Mel-Frequency Cepstral Coefficients (MFCCs) and spectral characteristics are extracted, while text transcriptions, generated using OpenAI’s Whisper model, are encoded with Word2Vec embeddings. Emotion classification is performed using a 7-layer Convolutional Neural Network (CNN) and a hybrid CNN-LSTM model. The integration of audio and text features improves the accuracy of emotion detection, which is then linked to dynamic music generation. This project offers a new framework for creating emotionally resonant content, with potential applications in media production, storytelling, and creative industries.
 
 ## Features
 
@@ -11,7 +11,7 @@ This study focuses on developing a multimodal emotion classification system that
 - **Multimodal Integration**: Combines both audio and text-based emotion features to improve classification performance.
 - **Emotion Classification**: Classifies emotions into categories like happiness, sadness, anger, surprise, etc.
 
-### Music Generation
+### Music Mapping
 - **Emotion-Driven Music Synthesis**: Selects personalized music based on the detected emotional context.
 
 ## Document Overview
@@ -93,3 +93,5 @@ This project uses the following datasets:
 - [TESS](https://utoronto.scholaris.ca/collections/036db644-9790-4ed0-90cc-be1dfb8a4b66)
 - [CREMA-D](https://www.kaggle.com/datasets/ejlok1/cremad)
 
+## Resources
+- [Whisper AI](https://openai.com/index/whisper/)
