@@ -22,7 +22,6 @@ This study focuses on developing a multimodal emotion classification system that
 - **/plots**: configured visualization of our model's results.
 - **/predicted_emotions**: contains CSVs for actual emotions & predicted emotions.
 - **/transcriptions**: audio transcription using WhisperAI.
-- **/transformer_csv**: contains extracted features from the Wav2Vec models for each dataset in CSVs.
 - **cnn7layer.py**: CNN 7-layered model with 94.25% accuracy. (Best model)
 - **cnn_7layer_8layer_l2_lstm.py**: Experimented with 7-layered, 8-layered with L2 and LSTM models for improving accuracy.
 - **cnn_feature.comb.py**: combining text and audio features.
