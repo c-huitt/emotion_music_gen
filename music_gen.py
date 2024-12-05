@@ -100,7 +100,7 @@ plt.tight_layout()
 plt.savefig("plots/valence_arousal_emotion.png")
 
 audio_with_emotions_df.to_csv("datasets/DEAM/outputs/deam_mapping_with_emotions.csv", index=False)
-pred_df = pd.read_csv("predicted_emotions.csv")
+pred_df = pd.read_csv("predicted_emotions/predicted_emotions.csv")
 
 # Obtains a music file for the emotion given
 def music_to_emotions (df, pred_df, emotion_list=None):

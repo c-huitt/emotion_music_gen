@@ -98,7 +98,7 @@ output_df = pd.DataFrame({
 })
 
 # Save output to CSV
-output_csv_path = "predicted_emotions.csv"
+output_csv_path = "predicted_emotions/predicted_emotions.csv"
 output_df.to_csv(output_csv_path, index=False)
 print(f"Predicted emotions saved to {output_csv_path}")
 
