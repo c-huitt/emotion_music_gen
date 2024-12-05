@@ -1,5 +1,3 @@
-!pip install transformers torch librosa
-
 """#**SAVEE TRANSFORMATION FEATURE EXTRACTION**"""
 
 # new code for savee with file name
@@ -151,18 +149,18 @@ if __name__ == "__main__":
     print(f"Feature extraction complete. Shape: {wav2vec_features.shape}")
 
     # Save features to CSV
-    output_file = "/content/drive/My Drive/Project/saveetransformer_features_with_filenames.csv"
+    output_file = "feature_csv/saveetransformer_features_with_filenames.csv"
     save_features_to_csv(wav2vec_features, emotions, file_names, output_file)
 
 # manual and transformer feature merging
 import pandas as pd
 
 # Paths to the manual and transformer feature CSV files
-manual_features_path = "/content/drive/My Drive/Project/manual_features_with_filenames_final.csv"
-transformer_features_path = "/content/drive/My Drive/Project/saveetransformer_features_with_filenames.csv"
+manual_features_path = "feature_csv/manual_features_with_filenames_final.csv"
+transformer_features_path = "feature_csv/saveetransformer_features_with_filenames.csv"
 
 # Output path for the merged CSV
-merged_features_path = "/content/drive/My Drive/Project/merged_manual_transformer_savee_features.csv"
+merged_features_path = "feature_csv/merged_manual_transformer_savee_features.csv"
 
 # Load the manual and transformer feature CSVs into DataFrames
 manual_df = pd.read_csv(manual_features_path)
@@ -325,7 +323,7 @@ if __name__ == "__main__":
     print(f"Feature extraction complete. Shape: {wav2vec_features.shape}")
 
     # Save features, file names, and emotions to CSV
-    output_file = "/content/drive/My Drive/Project/ravdess_features_with_filenames.csv"
+    output_file = "feature_csv/ravdess_features_with_filenames.csv"
     save_features_to_csv(file_names, wav2vec_features, emotions, output_file)
 
 """# **CREMA TRANSFORMER FEATURE EXTRACTION**"""
@@ -463,7 +461,7 @@ if __name__ == "__main__":
     print(f"Feature extraction complete. Shape: {wav2vec_features.shape}")
 
     # Save features, file names, and emotions to CSV
-    output_file = "/content/drive/My Drive/Project/crema_features_audio.csv"
+    output_file = "feature_csv/crema_features_audio.csv"
     save_features_to_csv(file_names, wav2vec_features, emotions, output_file)
 
 """# **TESS TRANSFORMER FEATURE EXTRACTION**"""
@@ -591,5 +589,5 @@ if __name__ == "__main__":
     print(f"Feature extraction complete. Shape: {wav2vec_features.shape}")
 
     # Save features, file names, and emotions to CSV
-    output_file = "/content/drive/My Drive/Project/tess_features_audio.csv"
+    output_file = "feature_csv/tess_features_audio.csv"
     save_features_to_csv(file_names, wav2vec_features, emotions, output_file)

@@ -243,8 +243,3 @@ output_df = pd.DataFrame({
     "True_Emotion": label_encoder.inverse_transform(y_test),
     "Predicted_Emotion": label_encoder.inverse_transform(y_pred)
 })
-
-
-# output_csv_path = "/content/drive/My Drive/Project/predicted_emotions_updated.csv"
-# output_df.to_csv(output_csv_path, index=False)
-# print(f"\nPredicted emotions saved to {output_csv_path}")
