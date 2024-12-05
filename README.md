@@ -37,7 +37,7 @@ This study focuses on developing a multimodal emotion classification system that
 
 Ensure you have the following installed to run the front end application:
 1. Python 3.8+
-2. CUDA-enabled GPU (recommended for transformer models)
+2. CUDA-enabled GPU (recommended for text and audio feature extraction)
 3. System Dependencies: \
    **macOS:**
     ```bash
